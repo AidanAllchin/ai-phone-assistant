@@ -532,7 +532,7 @@ async def handle_media_stream(signalwire_ws: WebSocket):
         openai_ws = await websockets.connect(
             'wss://api.openai.com/v1/realtime?model=gpt-4o-realtime-preview-2024-12-17',
             extra_headers={
-                "Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}",
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
                 "OpenAI-Beta": "realtime=v1"
             }
         )
@@ -741,6 +741,7 @@ async def process_openai_messages(call: Call):
                                 function_result = await app.state.call_handler.forward_call_function(
                                     call=call
                                 )
+                            # TODO: Add `add_contact` function
                             
                             # Return function result back to OpenAI
                             if function_result:
@@ -1235,6 +1236,7 @@ class CallHandler:
             }
         
         # Call SignalWire API to forward the call
+        # NOTE: This requires the creation of a separate "bin" in SignalWire
         result = await _call_signalwire_api(
             method='POST',
             endpoint=f"Calls/{call.call_sid}",
