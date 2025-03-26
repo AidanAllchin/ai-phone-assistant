@@ -23,23 +23,23 @@ This technology demonstration leverages:
 
 ## Key Capabilities
 
-### Remarkably Natural Conversations
+#### Remarkably Natural Conversations
 
 Experience the latest in AI voice technology that sounds increasingly human, understanding nuance and responding appropriately.
 
-### Smart Call Handling
+#### Smart Call Handling
 
 The assistant intelligently manages your calls based on your preferences and caller identity.
 
-### Caller Recognition
+#### Caller Recognition
 
 Identifies known contacts and personalizes interactions accordingly.
 
-### Spam Protection
+#### Spam Protection
 
 Automatically detects and ends unwanted calls so you don't have to.
 
-### Complete Documentation
+#### Complete Documentation
 
 Every call is transcribed and archived for your reference.
 
@@ -63,6 +63,7 @@ The response times and voice quality will vary based on network conditions, API 
 - Python 3.8+
 - [SignalWire](https://signalwire.com/) account with a phone number
 - OpenAI API key with access to GPT-4o Realtime
+- Certificates from a *trusted* CA
 
 ## Installation
 
